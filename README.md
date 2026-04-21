@@ -56,7 +56,7 @@ Watch video [[2]](https://youtu.be/qb4nRoEAASA) for extra intuition. It is long 
 
 --The working principle of a tranposed convolution layer (simplified)
 
-When you run a `transposed_convolution()` function, the simplified procedure is:
+When you run a `transposed_convolution()` function, these are carried out under the hood:
 - Step 1: Calculate the output shape, zero-initialize it, pad it if necessary.
 - Step 2: For each cell in the input, multiply it with the kernel, then put that result in the output via an addition.
 - Step 3: Repeat step 2 until every cell in the input is visited.
