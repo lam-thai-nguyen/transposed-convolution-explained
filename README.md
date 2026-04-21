@@ -5,7 +5,7 @@ This project:
 2) Show how to choose parameters for a transposed convolution layer
 3) Explain and visualize why `transposed_convolution_2d(K=4, S=2, P=1)` is favoured for a 2x upsampling method
 
-Jump to [[Why you might like project exists?]](#why-you-might-like-this-project)
+Jump to [[Why you might like this project?]](#why-you-might-like-this-project)
 
 ## 1) How do transposed convolutions work?
 
