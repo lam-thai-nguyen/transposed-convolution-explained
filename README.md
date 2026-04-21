@@ -86,7 +86,7 @@ Image adapted from [[3]](https://distill.pub/2016/deconv-checkerboard/).
 ![no checkboard artifacts](images/no-checkboard-artifacts.png)
 ![checkboard artifacts](images/checkboard-artifacts.png)
 
-(left) `(k,s,p) = (12,6,3)` preventing checkboard artifacts for output, (right) `(k,s,p) = (35,5,0)` causing checkboard artifacts for output. Both upsample the input by a scaling factor of 6.
+The outputs of a transposed convolution when using (left) `(k,s,p) = (12,6,3)`, preventing checkboard artifacts, and (right) `(k,s,p) = (35,5,0)`, causing checkboard artifacts. Both upsample the input by a scaling factor of 6.
 
 ✔️ One more time: Checkerboard artifacts cause the output of a transposed convolution layer unevenly contributed. That is, at one spot, you only carry out 1 addition, but at other spots you carry out 3, 4, 5, or more additions.
 
