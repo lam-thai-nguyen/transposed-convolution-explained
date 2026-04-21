@@ -28,11 +28,12 @@ Even the [FCN](https://arxiv.org/abs/1411.4038) paper refers to transposed convo
 |Normal convolution| Input (big) --> Conv --> Output (smaller)|
 |Deconvolution| Input (big) --> Conv --> Output (smaller) --> Deconv --> Input (same values, same shape as input) |
 |Transposed convolution| Input (big) --> Conv --> Output (smaller) --> TransConv --> Output (different values, same shape as input)|
-|||
 
 --How?
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230110161402/Transposed-Convolutional-1.png" width="400">
+
+Image adapted from [[1]]((https://www.geeksforgeeks.org/machine-learning/what-is-transposed-convolutional-layer/)).
 
 ```
 initialize the output (here 3x3) with zeros (more details later)
@@ -52,7 +53,6 @@ Watch video [[2]](https://youtu.be/qb4nRoEAASA) for extra intuition. It is long 
 |Question|I have input (shape: 1x2x2). I want output (shape: 1x4x4) via a tranposed convolution. How do I select kernel size, stride and padding `(k,s,p)`?|
 |Short answer| Your scaling factor is `f = 2`. Then simply choose `(k,s,p) = (2f,f,f/2) = (4,2,1)`. |
 |Long answer| This is the simplified formula for calculating the output width and height `O = (I - 1)*s + k - 2*p`. Substituting `O=4` and `I=2`, we have `s + k - 2*p = 4`. You can choose `(k,s,p) = (3,1,0)` or `(4,2,1)` or whatever. Just remember `k >= s` holds in order for the output to be meaningful. Otherwise, there will be zeros in the output that aren't touched during the operation.|
-|||
 
 --The working principle of a tranposed convolution layer (simplified)
 
@@ -74,6 +74,8 @@ You might have seen this selection method in [FCN](https://arxiv.org/abs/1411.40
 You can read [[3]](https://distill.pub/2016/deconv-checkerboard/) to know more about this problem.
 
 <img src="https://distill.pub/2016/deconv-checkerboard/assets/fix_one_deconv_boat.png" width="200">
+
+Image adapted from [[3]](https://distill.pub/2016/deconv-checkerboard/).
 
 --Visualization
 
